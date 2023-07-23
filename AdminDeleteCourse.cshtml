@@ -1,0 +1,9 @@
+@model Course
+
+<h2>Confirm Deletion</h2>
+<p>Are you sure you want to delete the course "@Model.Title" (Course ID: @Model.CourseId)?</p>
+@using (Html.BeginForm())
+{
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="CourseManagement" class="btn btn-secondary">Cancel</a>
+}
